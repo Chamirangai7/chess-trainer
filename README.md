@@ -1,0 +1,2 @@
+# chess-trainer
+CS Trainer
