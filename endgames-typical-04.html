@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endgames Trainer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #transparent;
+        }
+
+        .container {
+            text-align: left;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1, h2, h3 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .trainer-image {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 5px;
+            margin: 35px auto 25px;
+            display: block;
+        }
+
+        #showAnswer {
+            display: none;
+        }
+
+        #showAnswer + label {
+            background-color: #0062ff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 7px;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        #showAnswer + label:hover {
+            background-color: #3280fc;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        #showAnswer:checked + label + .answer {
+            display: block;
+        }
+
+        .highlight {
+            color: #000000;
+            background-color: #ffffff;
+            padding: 4px;
+        }
+        
+        .text-icon {
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #2a006e;
+            margin-top: 25px;
+        }
+        
+        .text-icon img {
+            width: 100px;
+            margin-top: 25px;
+            margin-right: 10px;
+        }
+
+        .answer iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            margin-top: 60px;
+            text-decoration: underline;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        details ul li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        details ul li img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        h4 + ul li {
+            font-weight: normal; /* Removes bold from the list items following the h4 */
+        }
+
+        /* Default iframe styles */
+        iframe.original-size {
+            width: 700px;
+            height: 450px;
+            border:none;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        /* Responsive adjustments for all other iframes */
+        iframe:not(.original-size) {
+            width: 100%;
+            height: 500px;
+        }
+
+        /* Responsive container styling */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> 
+           
+           <p style="font-size: 21px;text-align: center;">  
+           <span class="highlight"><b>White to move &amp; win</b></span>
+        </p>
+
+        <!-- Non-responsive iframe -->
+        <iframe class="original-size" src="https://fritz.chessbase.com?pos=wKe6,Ph4/bKa3,Na7"></iframe>
+        
+        <h3><em><strong>පුහුණුව සඳහා උපදෙස්</strong></em></h3>
+        
+        <p>▪️ ඔබ සුදු පිළේ ඇදීම් සිදු කරන විට මඳ වේලවකට පසු කළු පිළේ ඇදීම් ස්වයංක්‍රීයව සිදුවේ.</p>
+        
+        <p>▪️ ඔබට මෙම ඉත්තන් මගින් තරඟය ජය ගැනීමට අපහසු නම් පහළින් ඇති <span style="color: #0062ff; font-weight: bold; background-color: #f0f0f0; padding: 3px;">Help me!</span> බටනය ක්ලික් කරන්න. එවිට විසඳුම් චෙස් පුවරුව දිස් වන අතර එම නිදසුන තුළින් ඔබට ඇදීම් කළ යුතු ආකාරය පිළිබඳ මනා අවබෝධයක් ලබා ගන්න පුළුවන්. මෙම බටනය නැවත වරක් ක්ලික් කළ විට විසඳුම් චෙස් පුවරුව ඉවත් වී යයි.</p>
+        
+        <details>
+            <summary>
+                <img src="https://imgur.com/6kAl2AG.png" alt="Image 1" style="width: 30px; height: auto;">
+                ඉහත චෙස් පුවරුව භාවිතා කරන ආකාරය ගැන වැඩිදුර දැන ගැනීමට <strong>මෙතැන</strong> ක්ලික් කරන්න...
+            </summary>
+            <ul>
+                <li>
+                   ▪️ ඉහත චෙස් පුවරුවේ [ New ] බටනය ක්ලික් කිරීමෙන් නැවත ආරම්භක පිහිටීමට ලබා ගත හැක.
+                </li>
+                <li>
+                   ▪️ [ Back ] හා [ Next ] බටන් ක්ලික් කිරීමෙන් ඔබ කරන ලද ඇදීම් පසුපසට හා ඉදිරියට ගත හැක.
+                </li>
+            </ul>
+        </details>
+
+        <input type="checkbox" id="showAnswer">
+        <label for="showAnswer"><b>Help me!</b></label>
+        <div class="answer">
+            <iframe src="https://lichess.org/study/embed/3W7uP0rF/x9YW4rlS?theme=brown&amp;pieceSet=merida&amp;bg=dark" frameborder="0"></iframe>
+
+            <h4>Answer Guide</h4>
+            <ul>
+                <li>
+                    මෙම නිදසුන් චෙස් පුවරුවේ පහළින් ඇති  
+                    <img src="https://imgur.com/6pH9npz.png" alt="Right Arrow" style="vertical-align: middle; margin-right: 10px; width: 25px; height: auto;">
+                    දකුණු පස ඊතලය ක්ලික් කිරීමෙන් ඇදීම් පියවරෙන් පියවර බැලීමේ හැකියාව ඇත.
+                </li>
+                <li>
+                    <img src="https://imgur.com/Cx8d42e.png" alt="Left Arrow" style="vertical-align: middle; margin-right: 10px; width: 25px; height: auto;">
+                    වම්පස ඊතලය ක්ලික් කිරීමෙන් ඇදීම් පසුපසට ගෙන නැවත නැවත බැලීමේ හැකියාව ද සහිතයි.
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
